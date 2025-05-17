@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Login Box</title>
-  <!-- קישור ל־CSS חיצוני -->
+
+<!-- Link to css -->
   <link rel="stylesheet" href="web_css_sign_in.css">
 </head>
 <body>
 
     <div class="login-box">
       <h2>Sign In</h2>
-      <!-- הטופס הקיים -->
+      <!--  Regular sign/log in -->
       <form action="/login" method="post">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Sign In</button>
       </form>
 
-      <!-- כפתור Google Sign In -->
+      <!-- Sign in button -->
       <div id="google-signin-button"></div>
     </div>
 
-    <!-- 1. טען את הספרייה של Google Identity Services -->
+    <!-- Google library -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-    <!-- 2. הגדר את ה-callback שתטפל במידע -->
+    <!-- callback setting -->
     <script>
       function handleCredentialResponse(response) {
-        // response.credential מכיל את ה-ID token (JWT)
-        // נשלח לשרת כדי לאמת וליצור סשן
         fetch('/gcallback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -46,7 +45,7 @@
 
       window.onload = () => {
         google.accounts.id.initialize({
-          client_id: 'YOUR_CLIENT_ID_HERE',
+          client_id: '182999458483-8nv6bv428s0pl8c2a34thvp4qat5ovdh.apps.googleusercontent.com',
           callback: handleCredentialResponse
         });
         google.accounts.id.renderButton(

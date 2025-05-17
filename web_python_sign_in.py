@@ -3,27 +3,27 @@ from google.oauth2 import id_token
 from google.auth.transport import requests as grequests
 
 app = Flask(__name__)
-app.secret_key = 'SECRET_KEY_YOUR_CHOICE'
+app.secret_key = 'MantinOhadToltsis'
 
-# העמוד הראשי עם ה-login-box
+# Main page, login box
 @app.route('/')
 def index():
     return render_template('web_html_sign_in.html')
 
-# Route לטיפול ב-Google Sign In
+# route for google sign in
 @app.route('/gcallback', methods=['POST'])
 def gcallback():
     data = request.get_json()
     token = data.get('credential')
     try:
-        # אימות הטוקן מול Google
-        idinfo = id_token.verify_oauth2_token(token, grequests.Request(), "YOUR_CLIENT_ID_HERE")
+        # verify token
+        idinfo = id_token.verify_oauth2_token(token, grequests.Request(), "182999458483-8nv6bv428s0pl8c2a34thvp4qat5ovdh.apps.googleusercontent.com")
 
-        # idinfo יכיל שדות כמו 'sub' (id ייחודי למשתמש), 'email', 'name' וכו'
+        # data base
         user_id = idinfo['sub']
         user_email = idinfo.get('email')
 
-        # כאן תוכל/י לבדוק במסד נתונים אם המשתמש קיים, ליצור משתמש חדש, וכו'
+        # check if the user is already exist
         session['user'] = {
             'id': user_id,
             'email': user_email,
@@ -32,10 +32,10 @@ def gcallback():
         return jsonify({ 'success': True })
 
     except ValueError:
-        # טוקן לא תקין
+        # not valid token
         return jsonify({ 'success': False }), 400
 
-# דוגמה לדף המוגן
+# example
 @app.route('/dashboard')
 def dashboard():
     if 'user' not in session:
