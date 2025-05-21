@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT Style</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <div class="chat-box">
+      <div class="messages" id="chat-messages">
+        <div class="message welcome">Welcome to our first project {{username}}👋</div>
+      </div>
+      <form class="input-area" method="POST">
+        <input type="text" name="message" placeholder="Send a message..." autocomplete="off">
+        <button type="submit">➤</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
