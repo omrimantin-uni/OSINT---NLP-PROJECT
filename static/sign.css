@@ -74,8 +74,7 @@ button:hover {
 }
 
 .error {
-  background-color: #da3633;
-  color: white;
+  color: #da3633;
   padding: 10px;
   margin-bottom: 16px;
   border-radius: 6px;
