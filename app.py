@@ -33,9 +33,12 @@ def signup():
                 users = []
 
 
-    users.append(user_data)
+
     if any(u.get('username') == username for u in users):
         return render_template('sign_up.html', error="Username already exists. Please choose another.")
+    users.append({'username': username, 'password': password})
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(users, f, ensure_ascii=False, indent=4)
 
     return render_template('main_page.html', username=username)
 
