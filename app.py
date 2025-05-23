@@ -49,7 +49,7 @@ def sign_in():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        # 1. טוענים את המשתמשים מהקובץ (או [] אם לא קיים/פגום)
+
         if os.path.exists('users.json'):
             with open('users.json', 'r', encoding='utf-8') as f:
                 try:
@@ -59,17 +59,17 @@ def sign_in():
         else:
             users = []
 
-        # 2. עוברים על כל המשתמשים – בלי else בתוך הלולאה
+
         for user in users:
             if user.get('username') == username:
                 if user.get('password') == password:
                     return render_template('main_page.html', username=username)
                 else:
                     return render_template('sign_in.html', error="Incorrect password.")
-        # 3. אם לא מצאנו בכלל שם תואם, חוזרים עם שגיאת “not found”
+
         return render_template('sign_in.html', error="Username not found.")
     else:
-        # GET רגיל – מציגים את טופס ה־signin
+
         return render_template('sign_in.html')
 
 
