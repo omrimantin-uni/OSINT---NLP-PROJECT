@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Osint</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSINT + NLP Project</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
 </head>
 <body>
-  <div class="chat-wrapper">
-    <div class="chat-box">
-      <div class="messages" id="chat-messages">
-        <div class="message welcome">Welcome to our first project {{username}}👋</div>
-      </div>
-      <form class="input-area" method="POST">
-        <input type="text" name="message" placeholder="Send a message..." autocomplete="off">
-        <button type="submit">➤</button>
-      </form>
+  <header class="header">
+    <div class="container header-container">
+
+
+      <h1 class="logo">🧠 DeepPulse	</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#team">Team</a>
+        <a href="/logout" class="logout-link">Logout</a>
+
+
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Welcome <span class="highlight">{{ username }}</span>!</h2>
+      <p class="hero-subtitle">Empowering analysis with natural language and machine learning.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3 class="section-title">About the Project</h3>
+      <p class="about-text">
+        This project is an exploration into the power of open-source intelligence (OSINT) combined with advanced natural language processing (NLP).
+        The goal is to transform raw online text into structured insights about people, places, and behaviors — ethically and intelligently.
+      </p>
+      <div class="about-grid">
+        <div class="about-box">
+          <h4>🎯 Vision</h4>
+          <p>Enable meaningful profiling and behavioral understanding from online text — with transparency, simplicity, and privacy-first thinking.</p>
+        </div>
+        <div class="about-box">
+          <h4>🔬 How It Works</h4>
+          <p>Text is processed with custom-trained NER models to extract names, locations, and interests. In the future, this will include behavioral profiling and OSINT signal mapping.</p>
+        </div>
+        <div class="about-box">
+          <h4>🚀 What’s Next</h4>
+          <p>Integrating real-time dashboards, Reddit data streams, and user behavior modeling — all powered by open tools like spaCy and Flask.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="features" class="features">
+    <div class="container">
+      <h3 class="section-title">Key Capabilities</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h4>NER Models</h4>
+          <p>Custom-trained models that detect names, locations, ages, and interests.</p>
+        </div>
+        <div class="card">
+          <h4>User Insights</h4>
+          <p>Behavioral profiling from real-world OSINT text and Reddit analysis.</p>
+        </div>
+        <div class="card">
+          <h4>Zero-JavaScript</h4>
+          <p>Lightweight, elegant UI designed to work without scripts or trackers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="team">
+    <div class="container">
+      <h3 class="section-title">Built by Curious Minds</h3>
+      <p>Driven by passion for language, AI, and ethical open-source intelligence.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 OSINT + NLP Project • Built by Omri Mantin, Omri Toltsis, Ohad Akunis</p>
+  </footer>
 </body>
 </html>

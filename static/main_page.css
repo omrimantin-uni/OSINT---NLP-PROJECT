@@ -1,89 +1,186 @@
-body {
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background-color: #343541;
-  color: #fff;
+}
+
+/* Base */
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #101216;
+  color: #eaecef;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.header {
+  background: #1a1d23;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #2c2f36;
+}
+
+.header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.chat-wrapper {
-  width: 100%;
-  max-width: 720px;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  background-color: #444654;
-  overflow: hidden;
-}
-
-.chat-box {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.messages {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.message {
-  background-color: #565869;
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  width: fit-content;
-  max-width: 80%;
-  word-wrap: break-word;
-}
-
-.welcome {
-  background-color: #3e3f4b;
-  text-align: center;
-  margin: 20px auto;
+.logo {
+  font-size: 1.6rem;
+  color: #61dafb;
   font-weight: bold;
 }
 
-.input-area {
+.nav a {
+  color: #eaecef;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #61dafb;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #1f222a, #101216);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #61dafb;
+}
+
+.hero-subtitle {
+  color: #b0b3b8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Features */
+.features {
+  background: #181b21;
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  color: #61dafb;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.card-grid {
   display: flex;
-  padding: 10px;
-  background-color: #40414f;
-  border-top: 1px solid #2f3038;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-.input-area input {
-  flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background-color: #40414f;
-  color: #fff;
-  font-size: 16px;
+.card {
+  background: #23272f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.1);
+  transition: transform 0.2s;
 }
 
-.input-area input:focus {
-  outline: none;
-  border: 1px solid #888;
+.card:hover {
+  transform: scale(1.03);
 }
 
-.input-area button {
-  margin-left: 10px;
-  padding: 12px 16px;
-  border: none;
-  border-radius: 8px;
-  background-color: #10a37f;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+.card h4 {
+  color: #61dafb;
+  margin-bottom: 0.5rem;
 }
 
-.input-area button:hover {
-  background-color: #0e8f6e;
+/* Team */
+.team {
+  background: #121418;
+  text-align: center;
+  padding: 3rem 0;
+  color: #cdd1d6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0c0d0f;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.logout-link {
+  background-color: transparent;
+  color: #61dafb;
+  border: 2px solid #61dafb;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+.logout-link:hover {
+  color: #ffffff;
+  transform: scale(2)
+}
+
+.about {
+  background: #1c1f26;
+  padding: 3rem 0;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #cfd2d6;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-box {
+  background: #23272f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(97, 218, 251, 0.08);
+}
+
+.about-box h4 {
+  color: #61dafb;
+  margin-bottom: 0.5rem;
+}
+
+.about-box p {
+  color: #cdd1d6;
+  font-size: 0.95rem;
 }

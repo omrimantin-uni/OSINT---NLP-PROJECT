@@ -77,5 +77,8 @@ def sign_in():
 def main_page():
     return render_template('main_page.html', username="Guest")
 
+@app.route('/logout')
+def logout():
+    return render_template('sign_in.html')
 if __name__ == '__main__':
     app.run(debug=True)
