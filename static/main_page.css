@@ -22,9 +22,9 @@ body {
 
 /* Header */
 .header {
-  background: #1a1d23;
+  background: #05070B ;
   padding: 1.2rem 0;
-  border-bottom: 1px solid #2c2f36;
+
 }
 
 .header-container {
@@ -54,7 +54,8 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(180deg, #1f222a, #101216);
+  background: linear-gradient(180deg, #070A10   , #0F151F   );
+
 }
 
 .hero-title {
@@ -75,7 +76,7 @@ body {
 
 /* Features */
 .features {
-  background: #181b21;
+  background: linear-gradient(180deg, #141E2D     , #1A2638     );
   padding: 3rem 0;
 }
 
@@ -118,13 +119,14 @@ body {
   text-align: center;
   padding: 3rem 0;
   color: #cdd1d6;
+  height: 200px;
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 1rem;
-  background: #0c0d0f;
+  background: #05070B ;
   color: #6c757d;
   font-size: 0.9rem;
 }
@@ -147,7 +149,9 @@ body {
 }
 
 .about {
-  background: #1c1f26;
+
+  background: linear-gradient(180deg, #0F151F     , #141E2D     );
+  background-blend-mode: screen, difference, lighten;
   padding: 3rem 0;
 }
 
