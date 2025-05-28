@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('sign_in.html')
+    return render_template('sign_up.html')
 
 @app.route('/signup', methods=['POST'])
 def signup():
@@ -80,5 +80,16 @@ def main_page():
 @app.route('/logout')
 def logout():
     return render_template('sign_in.html')
+
+def index():
+    return render_template('main_page.html', username="YourName")
+
+@app.route('/analyze', methods=['POST'])
+def analyze():
+    user_input = request.form['user_input']
+    return  user_input
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

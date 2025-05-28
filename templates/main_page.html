@@ -11,7 +11,7 @@
     <div class="container header-container">
 
 
-      <h1 class="logo">🧠 DeepPulse	</h1>
+      <h1 class="logo">🧠 Neralyze	</h1>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#features">Features</a>
@@ -29,6 +29,18 @@
       <p class="hero-subtitle">Empowering analysis with natural language and machine learning.</p>
     </div>
   </section>
+
+<section class="text-input-section">
+  <div class="container">
+    <h3 class="section-title">Analyze Text</h3>
+    <form action="{{ url_for('analyze') }}" method="POST">
+      <input type="text" name="user_input" placeholder="Enter some text..." required class="text-input" />
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</section>
+
+
 
   <section id="about" class="about">
     <div class="container">

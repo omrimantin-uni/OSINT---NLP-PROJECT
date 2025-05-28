@@ -188,3 +188,42 @@ body {
   color: #cdd1d6;
   font-size: 0.95rem;
 }
+
+
+
+
+.text-input-section {
+  background: linear-gradient(180deg, #0F151F   ,#0F151F  );
+  padding: 2rem 0;
+  text-align: center;
+  height: 30vh;
+}
+
+.text-input {
+  width: 70%;
+  padding: 1rem;
+  height:none ;
+  font-size: 1.5rem;
+  border: 1px solid #444444;
+  border-radius: 6px;
+  margin-right: 1rem;
+  color: white;
+  background-color: #23272f;
+
+  box-shadow: 0 0 12px #99e3ff;
+}
+
+.submit-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #333;
+  border: none;
+    color: gray
+  box-shadow: 0 0 12px #99e3ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #555;
+
+}
