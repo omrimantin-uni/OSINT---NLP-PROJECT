@@ -202,7 +202,7 @@ body {
 .text-input {
   width: 70%;
   padding: 1rem;
-  height:none ;
+  height: 3rem;
   font-size: 1.5rem;
   border: 1px solid #444444;
   border-radius: 6px;
@@ -217,7 +217,7 @@ body {
   padding: 0.6rem 1.2rem;
   background-color: #333;
   border: none;
-    color: gray
+  color: gray;
   box-shadow: 0 0 12px #99e3ff;
   border-radius: 6px;
   cursor: pointer;
