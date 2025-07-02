@@ -1,0 +1,21 @@
+# Virtual environments
+venv/
+.venv/
+env/
+venv-osint/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Other
+*.log
+.DS_Store
